@@ -1,0 +1,20 @@
+<% include ./partials/header %>
+
+<div class="container">
+         <div class="row">
+                  
+                  <div style="width: 50%; margin: 25px auto;">
+                  	<p><strong><%= currentUser.username %></strong></p>
+                  	<form enctype="multipart/form-data" action="/upload/profile/picture?_method=PUT" method="POST">
+			<input class="form-control" type="file" name="image"  accept="image/*">
+			<button class="btn btn-lg btn-primary btn-block">Upload Now</button>
+		</form>
+		   <p><%= currentUser.mobile %></p>
+		   <p><%= currentUser.address %></p>
+		   <p><%= currentUser.email %></p>
+		<p><a href="/campgrounds">Go Back</a></p>
+		</div>
+	</div>
+</div>
+
+<% include ./partials/footer %>

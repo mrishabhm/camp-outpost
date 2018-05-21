@@ -1,0 +1,72 @@
+<script language="javascript">
+
+function checkEmail() {
+
+    var email = document.getElementById('txtEmail');
+    var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+    if (!filter.test(email.value)) {
+    alert('Please provide a valid email address');
+    email.focus;
+    return false;
+    else{
+    alert('Registered Successfully!!');
+    }
+ }
+}</script>
+
+<div class="container-fluid">
+	<div class="row" style="background : #f6f6f6; ">
+	<h2 class="wl-heading-2 text-center"> 
+		<span>About us</span> 
+	</h2>
+			<div class="col-md-3">
+				<div class="wl-section-2">
+					<h4 style="font-weight : bold;">Mission</h4>
+					<p>Our main mission is to provide the best suitable palces to visit in India along with the basic idea of the package available that suits best to you and You will be able to make the best out of it..</p>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="wl-section-2">
+				<h4 style="font-weight : bold;">Places</h4>
+					<p><a href="/campgrounds/mountains" class="wl-custom-link-1">Mountains</a></p>
+					<p><a href="/campgrounds/adventureous" class="wl-custom-link-1"> Adventureous</a></p>
+					<p><a href="/campgrounds/religious" class="wl-custom-link-1"> Religious</a></p>	
+					<p><a href="/campgrounds/haunted" class="wl-custom-link-1"> Haunted</a></p>				
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="wl-section-2">
+					<h4 style="font-weight : bold;">Owners</h4>
+					<p> Nitin <br> +91 9991135923 </p>
+					<p> Rishabh <br> +91 8587008852 </p>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="wl-section-2">
+					<h4 style="font-weight : bold;">Other Links</h4>
+					<div style="margin-top : 20px;">
+					<i class="fa fa-facebook-official fa-2x wl-custom-icon-1-1 wl-icon-padding" aria-hidden="true" title="Facebook" onclick="window.location.href='https://www.facebook.com/YelpCamp'"></i>
+					<i class="fa fa-google-plus-official fa-2x wl-custom-icon-1-2 wl-icon-padding" aria-hidden="true" title="Google Plus" onclick="window.location.href='https://www.googleplus.com/YelpCamp'"></i>
+					<i class="fa fa-instagram fa-2x wl-custom-icon-1-3 wl-icon-padding" aria-hidden="true" title="Instagram" onclick="window.location.href='https://www.instagram.com/YelpCamp'"></i>
+					<i class="fa fa-whatsapp fa-2x wl-custom-icon-1-4 wl-icon-padding" aria-hidden="true" title="WhatsApp" onclick="window.location.href='https://www.web.whatsapp.com/YelpCamp'"></i>
+					</div>
+				</div>
+				<div class="input-group" style="margin-top : 20px;">
+					<input type='text' id='txtEmail' class="form-control"/>
+					<span class="input-group-btn" name="email" >
+					<input type='submit' name='submit' onclick='Javascript:checkEmail();'/>Submit
+					</span>
+				</div>
+			</div>
+		
+	</div>
+	<div class="row" style="background : #000; padding : 5px;">
+		
+			<p class="wl-copyright"> All Rights Reserved with © YelpCamp </p> 
+		
+		
+	</div>
+</div>
+    </body>
+</html>

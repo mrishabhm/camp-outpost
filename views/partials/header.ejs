@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Camping</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="/stylesheets/main.css">
+    </head>
+    <body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header" >
+               <ul class="nav nav-tabs" >
+                        <li class="tab"><a href="/">Tourism</a></li>
+                        <li class="tab"><a href="/campgrounds/mountains">Mountains</a></li>
+                        <li class="tab"><a href="/campgrounds/adventureous">Adventureous</a></li>
+                        <li class="tab"><a href="/campgrounds/religious">Religious</a></li>
+                        <li class="tab"><a href="/campgrounds/historic">Historic</a></li>
+                        <li class="tab"><a href="/campgrounds/haunted">Haunted</a></li>
+                        <li class="tab"><a href="/contact">Contact Us</a></li>                        
+                      </ul>
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <% if(!currentUser){ %>
+                             <li><a href="/register">Sign Up</a></li>
+                             <li><a href="/login">Login</a></li>
+                    <% } else{ %>
+                             <li class="dropdown">
+                                  <a class="dropdown-toggle" data-toggle="dropdown" href="#"><%= currentUser.username %><span class="caret"></span></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="/myProfile">Profile</a></li>
+                                        <li><a href="/logout">Log Out</a></li>                        
+                                    </ul>
+                                </li>
+                    <% } %>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <% if(error && error.length>0){ %>
+                <div class="alert alert-danger" role="alert">
+                    <%= error %>
+                </div>  
+        <% } %>  
+        <% if(success && success.length>0){ %>
+                 <div class="alert alert-success" role="alert">
+                    <%= success %>
+                </div>  
+        <% } %>
+    </div>
+    
+
